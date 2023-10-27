@@ -1,0 +1,45 @@
+{
+  "name": "image-services",
+  "version": "0.0.1",
+  "description": "server application for held image process api",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/server.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holyholywood/express-image-services.git"
+  },
+  "keywords": [
+    "image",
+    "express",
+    "image",
+    "service"
+  ],
+  "author": "holyholywood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holyholywood/express-image-services/issues"
+  },
+  "homepage": "https://github.com/holyholywood/express-image-services#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.15",
+    "@types/multer": "^1.4.9",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.15",
+    "@types/express": "^4.17.20",
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

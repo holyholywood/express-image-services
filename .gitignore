@@ -1,0 +1,8 @@
+.env
+node_modules
+dist/
+
+public/**/**.png
+public/**/**.jpeg
+public/**/**.svg
+public/**/**.jpg
