@@ -7,7 +7,6 @@ class service {
         cb(null, "public/static/img/");
       },
       filename: function (req, file, cb) {
-        console.clear();
         cb(null, `${Date.now()}-${file.originalname}`);
       },
     });
