@@ -1,5 +1,21 @@
+import multer from "multer";
+
 class service {
-  upload() {}
+  static upload() {
+    const storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, "public/static/img/");
+      },
+      filename: function (req, file, cb) {
+        console.clear();
+        cb(null, `${Date.now()}-${file.originalname}`);
+      },
+    });
+
+    const upload = multer({ storage });
+
+    return upload;
+  }
 }
 
 export default service;
