@@ -22,14 +22,6 @@ class UploadController {
       url: path,
     });
   }
-
-  static test(req: Request, res: Response) {
-    return res.status(200).json({
-      req: req.headers["content-type"],
-      body: req.body,
-      is: req.is("urlencoded"),
-    });
-  }
 }
 
 export default UploadController;
