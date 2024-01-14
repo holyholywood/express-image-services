@@ -9,7 +9,7 @@ class UploadController {
     }
 
     const fileName = req.file.filename;
-    const host = `${req.protocol}://${req.get("host")}`;
+    const host = `https://${req.get("host")}`;
     const path = `${host}/static/img/${fileName}`;
     const message = `from: ${req.ip},\t file: ${fileName},\t status: ${"SUCCESS"},\t time: ${new Date().toLocaleDateString(
       "id-ID"
