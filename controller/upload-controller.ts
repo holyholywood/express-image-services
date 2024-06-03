@@ -7,9 +7,9 @@ class UploadController {
     if (!req.file) {
       return res.status(400).send("No file uploaded.");
     }
-
+    const protocol = process.env.APP_HTTP_PROTOCOL || "https";
     const fileName = req.file.filename;
-    const host = `https://${req.get("host")}`;
+    const host = `${protocol}://${req.get("host")}`;
     const path = `${host}/static/img/${fileName}`;
     const message = `from: ${req.ip},\t file: ${fileName},\t status: ${"SUCCESS"},\t time: ${new Date().toLocaleDateString(
       "id-ID"
