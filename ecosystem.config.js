@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "Image Service",
+      name: "image.ditotisi.com",
       script: "dist/server.js", // The entry point of your application
       instances: 1, // Number of instances to run (adjust as needed)
       autorestart: true,
